@@ -21,11 +21,12 @@ export default function envGenerate(obj, dir, cb){
 
   if(arguments.length == 2){
     cb = dir
-    dir == __dirname
+    dir = __dirname
   }
 
   if(arguments.length == 1){
     cb = () => {};
+    dir = __dirname;
   }
 
   const file = path.join(dir , ".env");
