@@ -2,11 +2,13 @@
   "dependencies": {
     "err": "^2.1.7",
     "iterate-object": "^1.3.2",
+    "mkdirp": "^0.5.1",
     "tippy": "^0.0.0"
   },
   "scripts": {
     "build": "rimraf dist && babel src --out-dir dist",
-    "test": "ava"
+    "test": "ava",
+    "posttest" : "rimraf __generated__"
   },
   "ava": {
     "require": [

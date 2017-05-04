@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`envGenerate returns an array when passed a valid json object 1`] = `
-Array [
-  "a=1",
-]
-`;
