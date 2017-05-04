@@ -1,7 +1,7 @@
 import test from 'ava';
 import path from 'path';
 import fs from 'fs';
-import envGenerate, {generateEnvArray} from '../src';
+import envGenerate, {generateEnvArray} from '../dist';
 import rimraf from 'rimraf';
 
 const generatedEnvFolder = path.join(__dirname, "../", "__generated__");
