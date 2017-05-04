@@ -1,10 +1,12 @@
 import test from 'ava';
 import path from 'path';
+import fs from 'fs';
 import envGenerate, {generateEnvArray} from '../src';
 import rimraf from 'rimraf';
 
 const generatedEnvFolder = path.join(__dirname, "../", "__generated__");
 
+// test generateEnvArray util
 test('generateEnvArray is defined', t => {
 	t.is(typeof generateEnvArray, "function");
 });
@@ -30,31 +32,49 @@ test('generateEnvArray returns an array when passed a valid json object', t => {
 
 	const result = generateEnvArray({ a : 1});
 	t.is(result[0], "a=1");
-;
 });
 
-test('envGenerate writes a file', t => {
-	const writeFolder =  path.join(generatedEnvFolder, "test1")
-	envGenerate({ a : 1}, writeFolder);
-	t.is(true, true);
-})
+// Test various json fixtures
+const fixtures = [
+	{
+		name : "basic",
+		obj : { a : 1},
+		expected : "a=1"
+	},
+	{
+		name : "basic_2",
+		obj  : {
+			"NODE_ENV" : "development",
+			"API_KEY" : "Z4HTfmfL*&*EXBwe%HYt8E9OwZs&9lRQ"
+		},
+		expected : "NODE_ENV=development\nAPI_KEY=Z4HTfmfL*&*EXBwe%HYt8E9OwZs&9lRQ"
+	},{
+		name : "with_empty",
+		obj : {
+			"NODE_ENV" : "development",
+			"API_KEY" : "Z4HTfmfL*&*EXBwe%HYt8E9OwZs&9lRQ",
+			"EMPTY" : ""
+		},
+		expected : "NODE_ENV=development\nAPI_KEY=Z4HTfmfL*&*EXBwe%HYt8E9OwZs&9lRQ\nEMPTY="
+	}, {
+		name : "with_multiline",
+		obj : {
+			"NODE_ENV" : "development",
+			"API_KEY" : "Z4HTfmfL*&*EXBwe%HYt8E9OwZs&9lRQ",
+			"EMPTY" : "",
+			"MULTILINE" : "Something really long \nis being written here"
+		},
+		expected : "NODE_ENV=development\nAPI_KEY=Z4HTfmfL*&*EXBwe%HYt8E9OwZs&9lRQ\nEMPTY=\nMULTILINE=Something really long \nis being written here"
+	}
+]
 
-test('envGenerate test2', t => {
-	const writeFolder =  path.join(generatedEnvFolder, "test2")
-	envGenerate({
-		"NODE_ENV" : "development",
-		"API_KEY" : "Z4HTfmfL*&*EXBwe%HYt8E9OwZs&9lRQ"
-	}, writeFolder);
-	t.is(true, true);
-})
-
-
-test('envGenerate test3', t => {
-	const writeFolder =  path.join(generatedEnvFolder, "test3")
-	envGenerate({
-		"NODE_ENV" : "development",
-		"API_KEY" : "Z4HTfmfL*&*EXBwe%HYt8E9OwZs&9lRQ",
-		"EMPTY" : "",
-	}, writeFolder);
-	t.is(true, true);
-})
+fixtures.forEach(({name, obj , expected}, index) => {
+	test.cb(`envGenerate runs ${name} fixtures successfully`, t => {
+		const writeFolder =  path.join(generatedEnvFolder, name)
+		envGenerate(obj, writeFolder, (err, data) => {
+			const output = fs.readFileSync(path.resolve(writeFolder+"/.env"), "utf-8");
+			t.is(output, expected);
+			t.end();
+		});
+	});
+});

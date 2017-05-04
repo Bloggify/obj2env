@@ -16,15 +16,28 @@ export function generateEnvArray(obj){
   return arr;
 }
 
-export default function envGenerate(obj, dir = __dirname){
+export default function envGenerate(obj, dir, cb){
+
+
+  if(arguments.length == 2){
+    cb = dir
+    dir == __dirname
+  }
+
+  if(arguments.length == 1){
+    cb = () => {};
+  }
+
   const file = path.join(dir , ".env");
 
   function write(contents){
     mkdirp(path.dirname(file), function (err) {
     if(err){
-      return err;
+      cb(err);
     }
-    fs.writeFileSync(file , contents, "utf-8");
+    fs.writeFile(file , contents, (err, data) => {
+        cb(err, data);
+    });
   });
 
   }
