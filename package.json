@@ -1,7 +1,7 @@
 {
   "name": "stringify-env",
   "description": "Create files storing environment variables.",
-  "version": "1.0.0-beta",
+  "version": "1.0.0-beta1",
   "main": "lib/index.js",
   "dependencies": {
     "err": "^2.1.7",
