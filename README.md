@@ -3,7 +3,7 @@
 
  [![Version](https://img.shields.io/npm/v/stringify-env.svg)](https://www.npmjs.com/package/stringify-env) [![Downloads](https://img.shields.io/npm/dt/stringify-env.svg)](https://www.npmjs.com/package/stringify-env)
 
-> Create environment files from objects.
+> Create files storing environment variables.
 
 ## :cloud: Installation
 
