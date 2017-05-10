@@ -1,5 +1,6 @@
-node_modules
 *.swp
+*.swo
+*~
 *.log
-dist
-__generated__
+node_modules
+*.env
