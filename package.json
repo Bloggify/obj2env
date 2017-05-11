@@ -25,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bloggify/stringify-env.git"
+    "url": "git+https://github.com/Bloggify/object2env.git"
   },
   "keywords": [
     "environment",
@@ -41,9 +41,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Bloggify/stringify-env/issues"
+    "url": "https://github.com/Bloggify/object2env/issues"
   },
-  "homepage": "https://github.com/Bloggify/stringify-env#readme",
+  "homepage": "https://github.com/Bloggify/object2env#readme",
   "files": [
     "bin/",
     "app/",
@@ -55,5 +55,8 @@
     "menu/",
     "cli.js",
     "index.js"
-  ]
+  ],
+  "blah": {
+      "description": "Use [`dotenv`](https://www.npmjs.com/package/dotenv) for loading an `.env` file in your application."
+  }
 }
