@@ -1,7 +1,7 @@
 {
   "name": "obj2env",
   "description": "Create files storing environment variables by using objects.",
-  "version": "1.0.0-beta1",
+  "version": "1.0.0",
   "main": "lib/index.js",
   "dependencies": {
     "typpy": "^2.3.8"
@@ -57,6 +57,6 @@
     "index.js"
   ],
   "blah": {
-      "description": "Use [`dotenv`](https://www.npmjs.com/package/dotenv) for loading an `.env` file in your application."
+    "description": "Use [`dotenv`](https://www.npmjs.com/package/dotenv) for loading an `.env` file in your application."
   }
 }
