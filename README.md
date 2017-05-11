@@ -1,14 +1,16 @@
 
-# object2env
+# obj2env
 
- [![Version](https://img.shields.io/npm/v/object2env.svg)](https://www.npmjs.com/package/object2env) [![Downloads](https://img.shields.io/npm/dt/object2env.svg)](https://www.npmjs.com/package/object2env)
+ [![Version](https://img.shields.io/npm/v/obj2env.svg)](https://www.npmjs.com/package/obj2env) [![Downloads](https://img.shields.io/npm/dt/obj2env.svg)](https://www.npmjs.com/package/obj2env)
 
 > Create files storing environment variables by using objects.
+
+Use [`dotenv`](https://www.npmjs.com/package/dotenv) for loading an `.env` file in your application.
 
 ## :cloud: Installation
 
 ```sh
-$ npm i --save object2env
+$ npm i --save obj2env
 ```
 
 
@@ -17,7 +19,7 @@ $ npm i --save object2env
 
 
 ```js
-import { item, toArray, toFile } from "object2env"
+import { item, toArray, toFile } from "obj2env"
 
 console.log(item("PORT", 8080))
 // => PORT=8080

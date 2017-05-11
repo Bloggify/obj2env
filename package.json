@@ -1,5 +1,5 @@
 {
-  "name": "object2env",
+  "name": "obj2env",
   "description": "Create files storing environment variables by using objects.",
   "version": "1.0.0-beta1",
   "main": "lib/index.js",
@@ -25,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bloggify/object2env.git"
+    "url": "git+https://github.com/Bloggify/obj2env.git"
   },
   "keywords": [
     "environment",
@@ -41,9 +41,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Bloggify/object2env/issues"
+    "url": "https://github.com/Bloggify/obj2env/issues"
   },
-  "homepage": "https://github.com/Bloggify/object2env#readme",
+  "homepage": "https://github.com/Bloggify/obj2env#readme",
   "files": [
     "bin/",
     "app/",
