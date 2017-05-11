@@ -1,14 +1,14 @@
 
-# stringify-env
+# object2env
 
- [![Version](https://img.shields.io/npm/v/stringify-env.svg)](https://www.npmjs.com/package/stringify-env) [![Downloads](https://img.shields.io/npm/dt/stringify-env.svg)](https://www.npmjs.com/package/stringify-env)
+ [![Version](https://img.shields.io/npm/v/object2env.svg)](https://www.npmjs.com/package/object2env) [![Downloads](https://img.shields.io/npm/dt/object2env.svg)](https://www.npmjs.com/package/object2env)
 
-> Create files storing environment variables.
+> Create files storing environment variables by using objects.
 
 ## :cloud: Installation
 
 ```sh
-$ npm i --save stringify-env
+$ npm i --save object2env
 ```
 
 
@@ -17,15 +17,15 @@ $ npm i --save stringify-env
 
 
 ```js
-import { item, toArray, toFile } from "stringify-env"
+import { item, toArray, toFile } from "object2env"
 
-console.log(item("PORT", 8080));
+console.log(item("PORT", 8080))
 // => PORT=8080
 
 console.log(toArray({
     PORT: 8080
   , NODE_ENV: "production"
-}));
+}))
 // => [ 'PORT=8080', 'NODE_ENV=production' ]
 
 // Will create a file named `.env` in this directory
@@ -33,11 +33,11 @@ toFile({
     PORT: 8080
   , NODE_ENV: "production"
 }, __dirname, err => {
-    err && console.error(err);
+    err && console.error(err)
     // The .env file contains:
     // PORT=8080
     // NODE_ENV=production
-});
+})
 ```
 
 

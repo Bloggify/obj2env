@@ -1,13 +1,10 @@
 {
-  "name": "stringify-env",
-  "description": "Create files storing environment variables.",
+  "name": "object2env",
+  "description": "Create files storing environment variables by using objects.",
   "version": "1.0.0-beta1",
   "main": "lib/index.js",
   "dependencies": {
-    "err": "^2.1.7",
-    "iterate-object": "^1.3.2",
-    "mkdirp": "^0.5.1",
-    "tippy": "^0.0.0"
+    "typpy": "^2.3.8"
   },
   "scripts": {
     "test": "ava --verbose"
@@ -39,8 +36,8 @@
   ],
   "author": "Bloggify <support@bloggify.org> (https://bloggify.org)",
   "contributors": [
-      "Bhargav Ponnapalli <bhargavponnapalli.5@gmail.com>",
-      "Ionică Bizău <bizauionica@gmail.com> (https://ionicabizau.net)"
+    "Bhargav Ponnapalli <bhargavponnapalli.5@gmail.com>",
+    "Ionică Bizău <bizauionica@gmail.com> (https://ionicabizau.net)"
   ],
   "license": "MIT",
   "bugs": {
