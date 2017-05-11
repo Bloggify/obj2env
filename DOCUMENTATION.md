@@ -26,7 +26,7 @@ Create a file named `.env` in the specified directory.
 
 #### Params
 - **Object** `obj`: The object containing environment variables to stringify.
-- **String** `dir`: = "" The directory where to create the `.env` file.
+- **String** `dir`: The directory where to create the `.env` file (default: the current directory).
 - **Function** `cb`: The callback function.
 
 #### Return
