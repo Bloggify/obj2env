@@ -4,6 +4,7 @@
   "version": "1.0.1",
   "main": "lib/index.js",
   "dependencies": {
+    "streamp": "^2.2.8",
     "typpy": "^2.3.8"
   },
   "scripts": {
