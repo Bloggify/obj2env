@@ -1,7 +1,7 @@
 {
   "name": "obj2env",
   "description": "Create files storing environment variables by using objects.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.js",
   "dependencies": {
     "typpy": "^2.3.8"
