@@ -1,4 +1,4 @@
-import { item, toArray, toFile } from ".."
+var { item, toArray, toFile } = require("..")
 
 console.log(item("PORT", 8080))
 // => PORT=8080
