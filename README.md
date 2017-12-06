@@ -21,7 +21,7 @@ $ npm i --save obj2env
 
 
 ```js
-import { item, toArray, toFile } from "obj2env"
+var { item, toArray, toFile } = require("obj2env")
 
 console.log(item("PORT", 8080))
 // => PORT=8080
@@ -97,6 +97,11 @@ Create a file named `.env` in the specified directory.
 Have an idea? Found a bug? See [how to contribute][contributing].
 
 
+## :dizzy: Where is this library used?
+If you are using this library in one of your projects, add it in this list. :sparkles:
+
+
+ - [`obj2env-cli`](https://github.com/Bloggify/obj2env-cli#readme) (by Bloggify)—Create .env files in your terminal.
 
 ## :scroll: License
 
