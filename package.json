@@ -1,7 +1,7 @@
 {
   "name": "obj2env",
   "description": "Create files storing environment variables by using objects.",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "lib/index.js",
   "dependencies": {
     "streamp": "^2.2.8",
