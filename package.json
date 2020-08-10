@@ -4,8 +4,8 @@
   "version": "1.0.4",
   "main": "lib/index.js",
   "dependencies": {
-    "streamp": "^2.2.8",
-    "typpy": "^2.3.8"
+    "streamp": "^3.0.2",
+    "typpy": "^2.3.12"
   },
   "scripts": {
     "test": "ava --verbose"
@@ -18,10 +18,10 @@
     "babel": "inherit"
   },
   "devDependencies": {
-    "ava": "^0.19.1",
+    "ava": "^3.11.1",
     "babel-cli": "^6.24.1",
     "babel-polyfill": "^6.23.0",
-    "babel-preset-env": "^1.4.0",
+    "babel-preset-env": "^1.7.0",
     "babel-register": "^6.24.1"
   },
   "repository": {
